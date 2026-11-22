@@ -1,0 +1,131 @@
+body {
+    background-color: #0b3d2e;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.ranking {
+    background-color: #145a43;
+    border: 3px solid #ffd700;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+}
+
+.ranking h2 {
+    color: #ffd700;
+    margin: 0 0 5px 0;
+    font-size: 22px;
+}
+
+.ranking ol {
+    text-align: left;
+    font-size: 18px;
+    margin: 0;
+    padding-left: 40px;
+}
+
+.ranking li {
+    margin: 5px 0;
+}
+
+.ranking .empates {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+#vez {
+    font-size: 18px;
+}
+
+.game {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    background-color: #c0392b;
+    border: 6px solid #8e1b10;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.game > div {
+    border: 4px solid #8e1b10;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.game > div:hover {
+    background-color: #d35445;
+}
+
+.ganhou {
+    background-color: #ffd700 !important;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffea70;
+}
+
+/* aviso de quem ganhou */
+.aviso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aviso .caixa {
+    background-color: #fff;
+    color: #c0392b;
+    padding: 30px 50px;
+    border-radius: 10px;
+    border: 5px solid #ffd700;
+}
+
+.aviso p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.escondido {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .game {
+        width: 300px;
+        height: 300px;
+    }
+    .game > div {
+        font-size: 2.5em;
+    }
+}

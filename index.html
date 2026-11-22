@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha de Natal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Jogo da Velha de Natal</h1>
+
+    <div class="ranking">
+        <h2>🏆 Ranking</h2>
+        <ol id="lista-ranking"></ol>
+        <p class="empates">Empates: <b id="empates">0</b></p>
+    </div>
+
+    <p id="vez">Vez do jogador X 🎅</p>
+
+    <div class='game'></div>
+
+    <button onclick="tic_tac_toe.start()">Reiniciar</button>
+
+    <div id="aviso" class="aviso escondido">
+        <div class="caixa">
+            <p id="texto-aviso"></p>
+            <button onclick="tic_tac_toe.start()">Jogar de novo</button>
+        </div>
+    </div>
+
+    <script src="js/tic-tac-toe.js"></script>
+    <script>
+        tic_tac_toe.init( document.querySelector('.game') );
+        tic_tac_toe.start();
+    </script>
+
+</body>
+</html>
